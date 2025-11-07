@@ -13,6 +13,7 @@
          table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
          }
 
          caption {
@@ -26,6 +27,14 @@
          thead, tfoot{
             background-color: dimgrey;
             color: white;
+         }
+         
+         /* vai colar Estado e população funciona só ate ao final da taqbela*/
+         thead > tr >th { /* o th que esta dentro do tr que está dentro do cabeçalho*/
+            position:sticky ; /* posicionamento colado/fixo*/
+            top: -1px; /* colado na parte -1*/
+            background-color:dimgrey ;
+
          }
 
          tbody > tr:nth-child(2n){ /* de duas em duas linhas ela vai ficar  cinza e a otra banca efeito zebrado so nas tr dentro de tbody*/
@@ -227,7 +236,6 @@
                        <td class="num"><strong>213 421 037</strong></td>
                    </tr>  
                </tfoot>
-               
             </table>
-</body>
-</html>
+        </body>
+  </html>
